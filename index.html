@@ -8,34 +8,28 @@
 </head>
 <body>
   <!-- Barre de navigation -->
-  <nav class="navbar">
-    <div class="nav-container">
-      <h1 class="logo">LegiMedTrav</h1>
-      <ul class="nav-links">
-        <li><a href="#phase1" class="nav-link active" data-tab="phase1">Phase 1 : Briefing</a></li>
-        <li><a href="#dossier1" class="nav-link" data-tab="dossier1">Dossier 1 : Cadre Légal</a></li>
-        <li><a href="#dossier2" class="nav-link" data-tab="dossier2">Dossier 2 : Surveillance Médicale</a></li>
-        <li><a href="#dossier3" class="nav-link" data-tab="dossier3">Dossier 3 : Outils Réglementaires</a></li>
-        <li><a href="#dossier4" class="nav-link" data-tab="dossier4">Dossier 4 : Écosystème</a></li>
-        <li><a href="#phase6" class="nav-link" data-tab="phase6">Phase 6 : Débriefing</a></li>
-      </ul>
-    </div>
-  </nav>
+  <!-- Navigation Tabs -->
+<nav class="tabs-warroom">
+  <button class="tab-warroom active" data-tab="briefing">Phase 1 : Briefing</button>
+  <button class="tab-warroom" data-tab="dossier1">Dossier 1 : Cadre Légal</button>
+  <button class="tab-warroom" data-tab="dossier2">Dossier 2 : Surveillance Médicale</button>
+  <button class="tab-warroom" data-tab="dossier3">Dossier 3 : Outils Réglementaires</button>
+  <button class="tab-warroom" data-tab="dossier4">Dossier 4 : Écosystème</button>
+  <button class="tab-warroom" data-tab="debriefing">Phase 6 : Débriefing</button>
+</nav>
 
   <!-- Contenu principal -->
   <main class="container">
 
     <!-- PHASE 1 : BRIEFING -->
-<!-- Briefing -->
+     
 <section id="briefing" class="tab-content active">
   <h2>Phase 1 : Briefing de Mission</h2>
   <div class="card">
     <strong>Directeur de Mission (Présentateur) :</strong>
     <p>"Bonjour, docteurs. Votre mission : auditer l'entreprise 'Solutions Industrielles Algériennes'. Nous allons construire son Dossier de Prévention, de A à Z. Chaque phase est un 'Dossier d'Intervention' à valider. Notre atout tactique est notre analyste IA, <strong>LegiMedTrav-AI</strong>. Il est notre expert juridique embarqué, avec un accès instantané à toute la législation algérienne en SST."</p>
     
-    <!-- Espace visuel -->
-    <div class="spacer"></div>
-    
+    <!-- Notice Google — l'espace est géré par margin-top dans le CSS -->
     <p class="notice-google">
       ℹ️ Pour interagir avec <strong>LegiMedTrav-AI</strong>, vous devez disposer d’un <strong>compte Google gratuit</strong> (Gmail, YouTube, etc.).<br>
       Si vous n’en avez pas, vous serez invité à en créer un lors de l’ouverture du lien — cela prend moins d’une minute.
