@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LegiMedTrav — Mission SST : Bâtir la Prévention</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Barre de navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <h1 class="logo">LegiMedTrav</h1>
+      <ul class="nav-links">
+        <li><a href="#phase1" class="nav-link active" data-tab="phase1">Phase 1 : Briefing</a></li>
+        <li><a href="#dossier1" class="nav-link" data-tab="dossier1">Dossier 1 : Cadre Légal</a></li>
+        <li><a href="#dossier2" class="nav-link" data-tab="dossier2">Dossier 2 : Surveillance Médicale</a></li>
+        <li><a href="#dossier3" class="nav-link" data-tab="dossier3">Dossier 3 : Outils Réglementaires</a></li>
+        <li><a href="#dossier4" class="nav-link" data-tab="dossier4">Dossier 4 : Écosystème</a></li>
+        <li><a href="#phase6" class="nav-link" data-tab="phase6">Phase 6 : Débriefing</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Contenu principal -->
+  <main class="container">
+
+    <!-- PHASE 1 : BRIEFING -->
+    <section id="phase1" class="tab-content active">
+      <h2>Phase 1 : Briefing de Mission</h2>
+      <div class="card">
+        <p><strong>Directeur de Mission (Présentateur) :</strong></p>
+        <blockquote>
+          "Bonjour, docteurs. Votre mission, si vous l'acceptez : auditer l'entreprise 'Solutions Industrielles Algériennes', une société en pleine croissance mais avec un historique de sécurité perfectible. Nous allons construire ensemble son Dossier de Prévention, de A à Z, en conformité avec la loi. Chaque phase de notre mission est un 'Dossier d'Intervention' que nous devons valider. Notre principal atout tactique est notre analyste IA, LegiMedTrav-AI. Il est notre expert juridique embarqué, avec un accès instantané à toute la législation algérienne en SST."
+        </blockquote>
+      </div>
+      <div class="action-card">
+        <button class="ai-button" onclick="askAI('Bonjour LegiMedTrav-AI. Nous commençons la Mission SST. Rappelle-nous les trois piliers fondamentaux du cadre juridique algérien en santé au travail (Loi 88-07, Décret 91-05, Décret 05-09).')">
+          ✨ Interroger LegiMedTrav-AI
+        </button>
+      </div>
+    </section>
+
+    <!-- DOSSIER 1 : CADRE LÉGAL ET RESPONSABILITÉS -->
+    <section id="dossier1" class="tab-content">
+      <h2>Dossier 1 : Cadre Légal et Responsabilités</h2>
+      <div class="card">
+        <p><strong>Le Défi :</strong></p>
+        <blockquote>
+          Face à un manquement à la sécurité, un chef d'atelier déclare : 'Ce n'est pas mon problème'. Le travailleur affirme : 'On ne m'a rien donné'. Comment démêler les responsabilités pour agir efficacement ?
+        </blockquote>
+      </div>
+      <div class="action-card">
+        <button class="ai-button" onclick="askAI('LegiMedTrav-AI, affichez la pyramide des responsabilités en SST et les trois textes fondamentaux que tout médecin du travail doit maîtriser pour cadrer ce débat.')">
+          ✨ Interroger LegiMedTrav-AI
+        </button>
+      </div>
+    </section>
+
+    <!-- DOSSIER 2 : PLAN DE SURVEILLANCE MÉDICALE -->
+    <section id="dossier2" class="tab-content">
+      <h2>Dossier 2 : Plan de Surveillance Médicale</h2>
+      <div class="card">
+        <p><strong>Le Défi :</strong> L'entreprise emploie des soudeurs, des magasiniers caristes et des administratifs. Comment organiser leur suivi médical de manière pertinente et légale ?</p>
+      </div>
+      <div class="action-card">
+        <button class="ai-button" onclick="askAI('LegiMedTrav-AI, générez un tableau de surveillance médicale pour ces trois catégories, en précisant la nature du suivi, sa périodicité et les références légales.')">
+          ✨ Interroger LegiMedTrav-AI
+        </button>
+      </div>
+    </section>
+
+    <!-- DOSSIER 3 : LES OUTILS DU MÉDECIN -->
+    <section id="dossier3" class="tab-content">
+      <h2>Dossier 3 : Les Outils du Médecin</h2>
+      <div class="card">
+        <p><strong>Le Défi :</strong> Un inspecteur du travail arrive pour un contrôle inopiné. Il vous demande la preuve de votre activité. Quels sont les 3 documents CLÉS que vous devez lui présenter pour démontrer la conformité et le sérieux de votre service ?</p>
+      </div>
+      <div class="action-card">
+        <button class="ai-button" onclick="askAI('LegiMedTrav-AI, listez les 3 documents fondamentaux du médecin du travail et leur objectif principal.')">
+          ✨ Interroger LegiMedTrav-AI
+        </button>
+      </div>
+    </section>
+
+    <!-- DOSSIER 4 : L’ÉCOSYSTÈME DE LA PRÉVENTION -->
+    <section id="dossier4" class="tab-content">
+      <h2>Dossier 4 : L’Écosystème de la Prévention</h2>
+      <div class="card">
+        <p><strong>Le Défi :</strong> Vous avez identifié un risque d'intoxication alimentaire à la cantine. Simultanément, la CNAS vous contacte pour une enquête sur une maladie professionnelle déclarée par un soudeur. Comment gérez-vous ces deux fronts sans vous disperser ?</p>
+      </div>
+      <div class="action-card">
+        <button class="ai-button" onclick="askAI('LegiMedTrav-AI, pour ces deux cas, décrivez la collaboration à établir avec la CHS, l\'Inspection du Travail, la CNAS et le service d\'hygiène.')">
+          ✨ Interroger LegiMedTrav-AI
+        </button>
+      </div>
+    </section>
+
+    <!-- PHASE 6 : DÉBRIEFING FINAL -->
+    <section id="phase6" class="tab-content">
+      <h2>Phase 6 : Débriefing Final de Mission</h2>
+      <div class="card">
+        <blockquote>
+          "Mission accomplie. En moins d'une heure, nous avons bâti une stratégie de prévention solide et conforme. La réglementation n'est pas une contrainte, mais une feuille de route. Mais la vraie mission commence demain. Pour cela, LegiMedTrav-AI est transféré sur vos terminaux."
+        </blockquote>
+      </div>
+      <div class="card qr-section">
+        <h3>Scannez pour accéder à l'outil :</h3>
+        <div id="qrcode"></div>
+        <p style="font-size: 0.85em; color: #aaa; margin-top: 10px;">
+          💡 Un compte Google gratuit est requis pour utiliser LegiMedTrav-AI.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Scripts -->
+  <script src="libs/qrcode.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
