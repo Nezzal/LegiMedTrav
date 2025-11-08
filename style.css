@@ -16,106 +16,23 @@ body {
   min-height: 100vh;
 }
 
-h1 {
+/* === Titre Principal === */
+.app-header {
   text-align: center;
-  margin-bottom: 30px;
+  padding: 15px 0;
+  background-color: #0f0f15;
+  border-bottom: 1px solid #222;
+}
+
+.app-header h1 {
+  font-size: 2.5rem;
   color: #ffcc00;
   text-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
-  font-size: 2.2rem;
-}
-
-/* === Onglets (Navigation) === */
-.tabs {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-bottom: 25px;
-  justify-content: center;
-}
-
-.tab {
-  padding: 10px 20px;
-  background-color: #1a1a25;
-  color: #aaa;
-  border: 2px solid transparent;
-  border-radius: 6px;
-  cursor: pointer;
   font-weight: bold;
-  transition: all 0.3s ease;
+  letter-spacing: 1px;
+  margin: 0;
 }
 
-.tab:hover {
-  border-color: #444;
-}
-
-.tab.active {
-  border-color: #ff6600;
-  color: #ffcc00;
-  background-color: #222230;
-}
-
-/* === Contenu des onglets === */
-.tab-content {
-  display: none;
-  background-color: #151520;
-  padding: 25px;
-  border-radius: 10px;
-  border: 1px solid #333;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-}
-
-.tab-content.active {
-  display: block;
-}
-
-.card {
-  margin-bottom: 20px;
-}
-
-.card h3 {
-  color: #4a90e2;
-  margin-bottom: 10px;
-}
-
-.card p {
-  margin-bottom: 12px;
-}
-
-/* === Bouton IA === */
-.btn-primary {
-  display: block;
-  width: 100%;
-  max-width: 500px;
-  margin: 20px auto;
-  padding: 14px 20px;
-  background: linear-gradient(135deg, #ff6600, #ff9900);
-  color: white;
-  font-size: 1.1rem;
-  font-weight: bold;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(255, 102, 0, 0.4);
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(255, 102, 0, 0.6);
-}
-
-/* === Notice Google === */
-.notice-google {
-  background-color: #2a2a35;
-  border-left: 4px solid #4a90e2;
-  padding: 12px 16px;
-  margin-top: 24px; /* ← ESSENTIEL pour l'espace visible */
-  font-size: 0.92rem;
-  color: #e0e0ff;
-  border-radius: 0 6px 6px 0;
-  line-height: 1.5;
-}
 /* === Navigation War Room === */
 .tabs-warroom {
   display: flex;
@@ -125,6 +42,7 @@ h1 {
   padding: 12px 0;
   background-color: #0f0f15;
   border-bottom: 1px solid #222;
+  margin-bottom: 25px;
 }
 
 .tab-warroom {
@@ -152,20 +70,94 @@ h1 {
   box-shadow: 0 0 8px rgba(255, 102, 0, 0.5);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .tab-warroom {
-    padding: 6px 12px;
-    font-size: 0.85rem;
-  }
-}
-/* === QR Code en Phase 6 === */
-.qr-container {
-  text-align: center;
-  margin-top: 20px;
+/* === Contenu des onglets === */
+.tab-content {
+  display: none;
+  background-color: #151520;
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid #333;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
-.qr-container img {
+.tab-content.active {
+  display: block;
+}
+
+.card {
+  margin-bottom: 20px;
+}
+
+.card h2, .card h3 {
+  color: #ffcc00;
+  margin-bottom: 12px;
+}
+
+.card h3 {
+  color: #4a90e2;
+}
+
+.card p, .card blockquote {
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+blockquote {
+  font-style: italic;
+  padding: 12px 20px;
+  border-left: 3px solid #ff9900;
+  background-color: #1a1a25;
+  margin: 16px 0;
+}
+
+/* === Bouton IA === */
+.ai-button {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  margin: 24px auto;
+  padding: 14px 20px;
+  background: linear-gradient(135deg, #ff6600, #ff9900);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(255, 102, 0, 0.4);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.ai-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(255, 102, 0, 0.6);
+}
+
+/* === Notice Google === */
+.notice-google {
+  background-color: #2a2a35;
+  border-left: 4px solid #4a90e2;
+  padding: 12px 16px;
+  margin-top: 24px;
+  font-size: 0.92rem;
+  color: #e0e0ff;
+  border-radius: 0 6px 6px 0;
+  line-height: 1.5;
+}
+
+/* === QR Code en Débriefing === */
+.qr-section {
+  text-align: center;
+  margin-top: 30px;
+}
+
+#qrcode {
+  display: inline-block;
+  margin: 20px auto;
+}
+
+#qrcode img {
   max-width: 250px;
   border: 2px solid #444;
   border-radius: 8px;
@@ -179,16 +171,16 @@ h1 {
     padding: 12px;
   }
 
-  h1 {
+  .app-header h1 {
     font-size: 1.8rem;
   }
 
-  .tab {
-    padding: 8px 14px;
-    font-size: 0.9rem;
+  .tab-warroom {
+    padding: 6px 12px;
+    font-size: 0.85rem;
   }
 
-  .btn-primary {
+  .ai-button {
     padding: 12px;
     font-size: 1rem;
   }

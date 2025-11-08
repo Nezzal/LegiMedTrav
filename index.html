@@ -7,35 +7,38 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Barre de navigation -->
-  <!-- Navigation Tabs -->
-<nav class="tabs-warroom">
-  <button class="tab-warroom active" data-tab="briefing">Phase 1 : Briefing</button>
-  <button class="tab-warroom" data-tab="dossier1">Dossier 1 : Cadre Légal</button>
-  <button class="tab-warroom" data-tab="dossier2">Dossier 2 : Surveillance Médicale</button>
-  <button class="tab-warroom" data-tab="dossier3">Dossier 3 : Outils Réglementaires</button>
-  <button class="tab-warroom" data-tab="dossier4">Dossier 4 : Écosystème</button>
-  <button class="tab-warroom" data-tab="debriefing">Phase 6 : Débriefing</button>
-</nav>
+
+  <!-- Titre principal -->
+  <div class="app-header">
+    <h1>LegiMedTrav</h1>
+  </div>
+
+  <!-- Navigation War Room -->
+  <nav class="tabs-warroom">
+    <button type="button" class="tab-warroom active" data-tab="briefing">Phase 1 : Briefing</button>
+    <button type="button" class="tab-warroom" data-tab="dossier1">Dossier 1 : Cadre Légal</button>
+    <button type="button" class="tab-warroom" data-tab="dossier2">Dossier 2 : Surveillance Médicale</button>
+    <button type="button" class="tab-warroom" data-tab="dossier3">Dossier 3 : Outils Réglementaires</button>
+    <button type="button" class="tab-warroom" data-tab="dossier4">Dossier 4 : Écosystème</button>
+    <button type="button" class="tab-warroom" data-tab="debriefing">Phase 6 : Débriefing</button>
+  </nav>
 
   <!-- Contenu principal -->
   <main class="container">
 
     <!-- PHASE 1 : BRIEFING -->
-     
-<section id="briefing" class="tab-content active">
-  <h2>Phase 1 : Briefing de Mission</h2>
-  <div class="card">
-    <strong>Directeur de Mission (Présentateur) :</strong>
-    <p>"Bonjour, docteurs. Votre mission : auditer l'entreprise 'Solutions Industrielles Algériennes'. Nous allons construire son Dossier de Prévention, de A à Z. Chaque phase est un 'Dossier d'Intervention' à valider. Notre atout tactique est notre analyste IA, <strong>LegiMedTrav-AI</strong>. Il est notre expert juridique embarqué, avec un accès instantané à toute la législation algérienne en SST."</p>
-    
-    <!-- Notice Google — l'espace est géré par margin-top dans le CSS -->
-    <p class="notice-google">
-      ℹ️ Pour interagir avec <strong>LegiMedTrav-AI</strong>, vous devez disposer d’un <strong>compte Google gratuit</strong> (Gmail, YouTube, etc.).<br>
-      Si vous n’en avez pas, vous serez invité à en créer un lors de l’ouverture du lien — cela prend moins d’une minute.
-    </p>
-  </div>
-</section>
+    <section id="briefing" class="tab-content active">
+      <h2>Phase 1 : Briefing de Mission</h2>
+      <div class="card">
+        <strong>Directeur de Mission (Présentateur) :</strong>
+        <p>"Bonjour, docteurs. Votre mission : auditer l'entreprise 'Solutions Industrielles Algériennes'. Nous allons construire son Dossier de Prévention, de A à Z. Chaque phase est un 'Dossier d'Intervention' à valider. Notre atout tactique est notre analyste IA, <strong>LegiMedTrav-AI</strong>. Il est notre expert juridique embarqué, avec un accès instantané à toute la législation algérienne en SST."</p>
+        
+        <p class="notice-google">
+          ℹ️ Pour interagir avec <strong>LegiMedTrav-AI</strong>, vous devez disposer d’un <strong>compte Google gratuit</strong> (Gmail, YouTube, etc.).<br>
+          Si vous n’en avez pas, vous serez invité à en créer un lors de l’ouverture du lien — cela prend moins d’une minute.
+        </p>
+      </div>
+    </section>
 
     <!-- DOSSIER 1 : CADRE LÉGAL ET RESPONSABILITÉS -->
     <section id="dossier1" class="tab-content">
@@ -46,11 +49,9 @@
           Face à un manquement à la sécurité, un chef d'atelier déclare : 'Ce n'est pas mon problème'. Le travailleur affirme : 'On ne m'a rien donné'. Comment démêler les responsabilités pour agir efficacement ?
         </blockquote>
       </div>
-      <div class="action-card">
-        <button class="ai-button" onclick="askAI('LegiMedTrav-AI, affichez la pyramide des responsabilités en SST et les trois textes fondamentaux que tout médecin du travail doit maîtriser pour cadrer ce débat.')">
-          ✨ Interroger LegiMedTrav-AI
-        </button>
-      </div>
+      <button type="button" class="ai-button" onclick="askAI('LegiMedTrav-AI, affichez la pyramide des responsabilités en SST et les trois textes fondamentaux que tout médecin du travail doit maîtriser pour cadrer ce débat.')">
+        ✨ Interroger LegiMedTrav-AI
+      </button>
     </section>
 
     <!-- DOSSIER 2 : PLAN DE SURVEILLANCE MÉDICALE -->
@@ -59,11 +60,9 @@
       <div class="card">
         <p><strong>Le Défi :</strong> L'entreprise emploie des soudeurs, des magasiniers caristes et des administratifs. Comment organiser leur suivi médical de manière pertinente et légale ?</p>
       </div>
-      <div class="action-card">
-        <button class="ai-button" onclick="askAI('LegiMedTrav-AI, générez un tableau de surveillance médicale pour ces trois catégories, en précisant la nature du suivi, sa périodicité et les références légales.')">
-          ✨ Interroger LegiMedTrav-AI
-        </button>
-      </div>
+      <button type="button" class="ai-button" onclick="askAI('LegiMedTrav-AI, générez un tableau de surveillance médicale pour ces trois catégories, en précisant la nature du suivi, sa périodicité et les références légales.')">
+        ✨ Interroger LegiMedTrav-AI
+      </button>
     </section>
 
     <!-- DOSSIER 3 : LES OUTILS DU MÉDECIN -->
@@ -72,11 +71,9 @@
       <div class="card">
         <p><strong>Le Défi :</strong> Un inspecteur du travail arrive pour un contrôle inopiné. Il vous demande la preuve de votre activité. Quels sont les 3 documents CLÉS que vous devez lui présenter pour démontrer la conformité et le sérieux de votre service ?</p>
       </div>
-      <div class="action-card">
-        <button class="ai-button" onclick="askAI('LegiMedTrav-AI, listez les 3 documents fondamentaux du médecin du travail et leur objectif principal.')">
-          ✨ Interroger LegiMedTrav-AI
-        </button>
-      </div>
+      <button type="button" class="ai-button" onclick="askAI('LegiMedTrav-AI, listez les 3 documents fondamentaux du médecin du travail et leur objectif principal.')">
+        ✨ Interroger LegiMedTrav-AI
+      </button>
     </section>
 
     <!-- DOSSIER 4 : L’ÉCOSYSTÈME DE LA PRÉVENTION -->
@@ -85,16 +82,14 @@
       <div class="card">
         <p><strong>Le Défi :</strong> Vous avez identifié un risque d'intoxication alimentaire à la cantine. Simultanément, la CNAS vous contacte pour une enquête sur une maladie professionnelle déclarée par un soudeur. Comment gérez-vous ces deux fronts sans vous disperser ?</p>
       </div>
-      <div class="action-card">
-        <button class="ai-button" onclick="askAI('LegiMedTrav-AI, pour ces deux cas, décrivez la collaboration à établir avec la CHS, l\'Inspection du Travail, la CNAS et le service d\'hygiène.')">
-          ✨ Interroger LegiMedTrav-AI
-        </button>
-      </div>
+      <button type="button" class="ai-button" onclick="askAI('LegiMedTrav-AI, pour ces deux cas, décrivez la collaboration à établir avec la CHS, l\'Inspection du Travail, la CNAS et le service d\'hygiène.')">
+        ✨ Interroger LegiMedTrav-AI
+      </button>
     </section>
 
-    <!-- PHASE 6 : DÉBRIEFING FINAL -->
-    <section id="phase6" class="tab-content">
-      <h2>Phase 6 : Débriefing Final de Mission</h2>
+    <!-- PHASE 6 : DÉBRIEFING -->
+    <section id="debriefing" class="tab-content">
+      <h2>Phase 6 : Débriefing</h2>
       <div class="card">
         <blockquote>
           "Mission accomplie. En moins d'une heure, nous avons bâti une stratégie de prévention solide et conforme. La réglementation n'est pas une contrainte, mais une feuille de route. Mais la vraie mission commence demain. Pour cela, LegiMedTrav-AI est transféré sur vos terminaux."
