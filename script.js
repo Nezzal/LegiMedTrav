@@ -1,6 +1,7 @@
 // =============== script.js ===============
-// Compatible avec LegiMedTrav — War Room SST
-// ✅ Fonctionne avec les sous-onglets + prompts détaillés
+// Mission SST : Bâtir la Prévention — Version finale 2025
+// ✅ Fonctionne sur desktop ET smartphone
+// ✅ Copie automatique résiliente + fallback modale
 
 console.log("✅ Script chargé — LegiMedTrav prêt");
 
@@ -34,7 +35,7 @@ document.querySelectorAll('.sub-tab-warroom').forEach(button => {
   });
 });
 
-// === 3. PROMPTS PRÉDÉFINIS ===
+// === 3. PROMPTS PRÉDÉFINIS (exacts, format réglementaire) ===
 const PROMPTS = {
   "dossier1-affaire1": `1. SECRET PROFESSIONNEL - CADRE LÉGAL :
 a) Le secret professionnel du médecin du travail comporte-t-il des exceptions 
@@ -147,6 +148,7 @@ FORMAT DE RÉPONSE EXIGÉ :
   le préciser explicitement
 - Distinguer clairement : obligations / recommandations / interdictions`,
 
+  // Dossiers 2–4 : prompts courts (à étendre si besoin)
   "dossier2-phase1": "Décrivez la surveillance médicale minimale obligatoire pour les travailleurs administratifs en Algérie (fréquence, contenu, rôle du médecin du travail), selon la loi 11-03 et ses textes d’application.",
   "dossier2-phase2": "Pour des soudeurs exposés aux fumées métalliques et UV, listez les examens complémentaires obligatoires, la fréquence des visites, et les critères d’inaptitude temporaire/ définitive.",
   "dossier2-phase3": "Expliquez le dispositif de Suivi Post-Professionnel (SPP) en Algérie : qui est concerné ? Quels sont les délais légaux ? Qui prend en charge les frais ? Quel est le rôle du médecin du travail ?",
@@ -159,18 +161,120 @@ FORMAT DE RÉPONSE EXIGÉ :
   "dossier4-incident3": "Après une crise (ex: accident collectif), quel suivi psychologique et médical est recommandé pour les victimes ? Quel format de Retour d’Expérience (REX) est exigé par la réglementation algérienne ?"
 };
 
-// === 4. FONCTION askAI (corrigée) ===
-function askAI(promptKey) {
+// === 4. askAI — version mobile-friendly (3 stratégies) ===
+async function askAI(promptKey) {
   const prompt = PROMPTS[promptKey];
-  if (!prompt) {
-    alert("⚠️ Prompt non défini pour : " + promptKey);
-    return;
-  }
+  if (!prompt) return alert("⚠️ Prompt non défini");
 
-  // ✅ URL propre et valide
-  const BASE_URL = "https://gemini.google.com/gem/1Nbqoj71k-LItw5pnm2xyH_QcxvBjZ5zr";
-  const url = BASE_URL + "?prompt=" + encodeURIComponent(prompt);
-  window.open(url, '_blank');
+  const button = document.querySelector(`[data-prompt-key="${promptKey}"]`);
+  const originalText = button?.innerHTML || "✨ Interroger LegiMedTrav-AI";
+
+  // 🌐 Ouvrir LegiMedTrav en arrière-plan (déjà chargé quand on colle)
+  const GEM_URL = "https://gemini.google.com/gem/1Nbqoj71k-LItw5pnm2xyH_QcxvBjZ5zr";
+  const gemTab = window.open(GEM_URL, '_blank');
+
+  // ⏳ Donner 1s au Gem de charger (meilleure UX mobile)
+  setTimeout(async () => {
+    // 📋 Stratégie 1 : API moderne (Chrome/Safari récents)
+    try {
+      await navigator.clipboard.writeText(prompt);
+      showFeedback(button, "✅ Copié ! Appuyez 2× dans le chat → 'Coller'");
+      return;
+    } catch (err) {
+      console.warn("Copie API échouée", err);
+    }
+
+    // 🔄 Stratégie 2 : execCommand (legacy, mais large support)
+    const textarea = document.createElement('textarea');
+    textarea.value = prompt;
+    textarea.style.position = 'fixed';
+    textarea.style.opacity = '0';
+    document.body.appendChild(textarea);
+    textarea.focus();
+    textarea.select();
+
+    try {
+      const success = document.execCommand('copy');
+      document.body.removeChild(textarea);
+      if (success) {
+        showFeedback(button, "✅ Copié ! Tapez 2× → 'Coller'");
+        return;
+      }
+    } catch (e) {
+      document.body.removeChild(textarea);
+    }
+
+    // ❗ Stratégie 3 : Modale de secours (100 % fonctionnelle)
+    showMobileFallback(prompt);
+  }, 1000);
+}
+
+// === Feedback court (2.5s) ===
+function showFeedback(button, msg) {
+  if (!button) return;
+  const original = button.innerHTML;
+  button.innerHTML = msg;
+  button.style.background = "linear-gradient(135deg, #4CAF50, #66BB6A)";
+  setTimeout(() => {
+    button.innerHTML = original;
+    button.style.background = "";
+  }, 2500);
+}
+
+// === Fallback mobile : boîte modale simple ===
+function showMobileFallback(prompt) {
+  const overlay = document.createElement('div');
+  overlay.style.cssText = `
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.7); z-index: 10000;
+    display: flex; align-items: center; justify-content: center;
+    padding: 20px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI';
+  `;
+
+  const box = document.createElement('div');
+  box.style.cssText = `
+    background: #1a1a25; color: #e0e0ff; border-radius: 12px;
+    width: 100%; max-width: 90vw; max-height: 80vh;
+    overflow: hidden; display: flex; flex-direction: column;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  `;
+
+  const header = document.createElement('div');
+  header.innerHTML = "📋 Copiez la question ci-dessous";
+  header.style.cssText = "background: #ff6600; padding: 14px 16px; font-weight: bold; font-size: 1.1rem;";
+
+  const content = document.createElement('div');
+  content.style.cssText = "flex: 1; overflow: auto; padding: 14px; font-size: 0.95rem; white-space: pre-wrap; line-height: 1.5;";
+  content.textContent = prompt;
+
+  const footer = document.createElement('div');
+  footer.style.cssText = "display: flex; gap: 8px; padding: 12px; background: #252535;";
+
+  const copyBtn = document.createElement('button');
+  copyBtn.textContent = "Copier";
+  copyBtn.style.cssText = "flex: 1; padding: 10px; background: #4a90e2; color: white; border: none; border-radius: 8px; font-weight: bold;";
+  copyBtn.onclick = () => {
+    navigator.clipboard?.writeText(prompt).then(() => {
+      copyBtn.textContent = "✅ OK ! Collez dans LegiMedTrav";
+      setTimeout(() => overlay.remove(), 2000);
+    }).catch(() => {
+      alert("⚠️ Sélectionnez tout le texte → Copier");
+    });
+  };
+
+  const closeBtn = document.createElement('button');
+  closeBtn.textContent = "Annuler";
+  closeBtn.style.cssText = "flex: 1; padding: 10px; background: #666; color: white; border: none; border-radius: 8px;";
+  closeBtn.onclick = () => overlay.remove();
+
+  footer.append(copyBtn, closeBtn);
+  box.append(header, content, footer);
+  overlay.append(box);
+  document.body.append(overlay);
+
+  overlay.onclick = (e) => {
+    if (e.target === overlay) overlay.remove();
+  };
 }
 
 // === 5. ÉCOUTE DES BOUTONS ===
@@ -179,11 +283,13 @@ document.querySelectorAll('.ai-button').forEach(button => {
     const key = button.getAttribute('data-prompt-key');
     if (key) {
       askAI(key);
+    } else {
+      console.warn("Bouton sans data-prompt-key", button);
     }
   });
 });
 
-// === 6. GÉNÉRATION DU QR CODE (corrigée) ===
+// === 6. GÉNÉRATION DU QR CODE (Débriefing) ===
 function generateQRCode() {
   const qrContainer = document.getElementById('qrcode');
   if (!qrContainer) return;
@@ -202,7 +308,7 @@ function generateQRCode() {
     });
   } catch (err) {
     console.error("Erreur QR :", err);
-    qrContainer.innerHTML = "<p>⚠️ Impossible de générer le QR</p>";
+    qrContainer.innerHTML = "<p style='color:#ff6600; text-align:center'>⚠️ QR non généré</p>";
   }
 }
 
