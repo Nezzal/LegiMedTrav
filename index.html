@@ -15,98 +15,377 @@
 
   <!-- Navigation War Room -->
   <nav class="tabs-warroom">
-    <button type="button" class="tab-warroom active" data-tab="briefing">Phase 1 : Briefing</button>
-    <button type="button" class="tab-warroom" data-tab="dossier1">Dossier 1 : Cadre Légal</button>
-    <button type="button" class="tab-warroom" data-tab="dossier2">Dossier 2 : Surveillance Médicale</button>
-    <button type="button" class="tab-warroom" data-tab="dossier3">Dossier 3 : Outils Réglementaires</button>
-    <button type="button" class="tab-warroom" data-tab="dossier4">Dossier 4 : Écosystème</button>
-    <button type="button" class="tab-warroom" data-tab="debriefing">Phase 6 : Débriefing</button>
+    <button type="button" class="tab-warroom active" data-tab="briefing">📢 Briefing</button>
+    <button type="button" class="tab-warroom" data-tab="dossier1">📁 Dossier 1</button>
+    <button type="button" class="tab-warroom" data-tab="dossier2">📁 Dossier 2</button>
+    <button type="button" class="tab-warroom" data-tab="dossier3">📁 Dossier 3</button>
+    <button type="button" class="tab-warroom" data-tab="dossier4">📁 Dossier 4</button>
+    <button type="button" class="tab-warroom" data-tab="debriefing">📝 Débriefing</button>
   </nav>
 
   <!-- Contenu principal -->
   <main class="container">
 
-    <!-- PHASE 1 : BRIEFING -->
+    <!-- BRIEFING -->
     <section id="briefing" class="tab-content active">
-      <h2>Phase 1 : Briefing de Mission</h2>
+      <h2>🎯 Briefing : Objectif de la mission</h2>
       <div class="card">
-        <strong>Directeur de Mission (Présentateur) :</strong>
-        <p>"Bonjour, docteurs. Votre mission : auditer l'entreprise 'Solutions Industrielles Algériennes'. Nous allons construire son Dossier de Prévention, de A à Z. Chaque phase est un 'Dossier d'Intervention' à valider. Notre atout tactique est notre analyste IA, <strong>LegiMedTrav-AI</strong>. Il est notre expert juridique embarqué, avec un accès instantané à toute la législation algérienne en SST."</p>
-        
+        <p>Bienvenue dans cette simulation SST. Vous allez explorer 4 dossiers critiques en santé au travail, ancrés dans le contexte algérien.</p>
+        <p>→ Dans chaque scénario, cliquez sur <strong>« Interroger LegiMedTrav »</strong> pour obtenir une analyse réglementaire et éthique immédiate.</p>
         <p class="notice-google">
-          ℹ️ Pour interagir avec <strong>LegiMedTrav-AI</strong>, vous devez disposer d’un <strong>compte Google gratuit</strong> (Gmail, YouTube, etc.).<br>
-          Si vous n’en avez pas, vous serez invité à en créer un lors de l’ouverture du lien — cela prend moins d’une minute.
+          ℹ️ Pour interagir avec <strong>LegiMedTrav-AI</strong>, vous devez disposer d’un <strong>compte Google gratuit</strong>.
         </p>
       </div>
     </section>
 
-    <!-- DOSSIER 1 : CADRE LÉGAL ET RESPONSABILITÉS -->
+    <!-- DOSSIER 1 : Dilemmes éthiques -->
     <section id="dossier1" class="tab-content">
-      <h2>Dossier 1 : Cadre Légal et Responsabilités</h2>
-      <div class="card">
-        <p><strong>Le Défi :</strong></p>
-        <blockquote>
-          Face à un manquement à la sécurité, un chef d'atelier déclare : 'Ce n'est pas mon problème'. Le travailleur affirme : 'On ne m'a rien donné'. Comment démêler les responsabilités pour agir efficacement ?
-        </blockquote>
+      <h2>📁 Dossier 1 : Dilemmes éthiques et devoirs du médecin</h2>
+
+      <div class="sub-tabs-warroom">
+        <button type="button" class="sub-tab-warroom active" data-subtab="d1-a1">Affaire n°1</button>
+        <button type="button" class="sub-tab-warroom" data-subtab="d1-a2">Affaire n°2</button>
+        <button type="button" class="sub-tab-warroom" data-subtab="d1-a3">Affaire n°3</button>
       </div>
-      <button type="button" class="ai-button" onclick="askAI('LegiMedTrav-AI, affichez la pyramide des responsabilités en SST et les trois textes fondamentaux que tout médecin du travail doit maîtriser pour cadrer ce débat.')">
-        ✨ Interroger LegiMedTrav-AI
-      </button>
+
+      <div id="d1-a1" class="sub-content-warroom active">
+  <div class="card">
+    <h3>🔐 Affaire n°1 : Le secret médical sous pression</h3>
+    <blockquote>
+      Un Directeur des Ressources Humaines exerce une pression sur le médecin du travail pour obtenir des informations médicales sur un salarié en arrêts maladie répétés.
+
+    </blockquote>
+
+    <div class="question-detail" style="margin-top: 16px; padding-top: 12px; border-top: 1px solid #333;">
+      <h4>📋 Question à poser à LegiMedTrav :</h4>
+      <pre style="background: #0a0a10; padding: 12px; border-radius: 4px; overflow-x: auto; font-size: 0.9em; white-space: pre-wrap;">
+1. SECRET PROFESSIONNEL - CADRE LÉGAL :
+   a) Le secret professionnel du médecin du travail comporte-t-il des exceptions 
+      face aux demandes d'un employeur ?
+   b) Citez les articles PRÉCIS du Code de Déontologie Médicale (Décret exécutif 
+      n° 92-276 du 06 juillet 1992, JO n° 52 du 08 juillet 1992, page 1160) 
+      définissant l'étendue et les limites du secret professionnel.
+   c) Précisez le numéro d'article ET reproduisez l'extrait pertinent du texte.
+
+2. COMMUNICATION AUTORISÉE :
+   a) Quelles informations le médecin du travail PEUT-il légalement communiquer 
+      à l'employeur concernant un salarié ?
+   b) Quelles informations sont STRICTEMENT INTERDITES de communication ?
+   c) Citez l'article du Décret 93-120 (relatif à l'organisation de la médecine 
+      du travail) précisant le contenu de l'avis d'aptitude.
+
+3. CONSÉQUENCES JURIDIQUES D'UNE VIOLATION :
+   a) Listez les trois types de responsabilités engagées en cas de violation 
+      du secret professionnel.
+   b) Pour chaque type, citez la base légale PRÉCISE (loi, décret, code, article).
+   c) Précisez les sanctions applicables selon chaque texte.
+
+FORMAT DE RÉPONSE EXIGÉ :
+- Chaque affirmation doit être suivie de : [Référence : Texte, Article, Alinéa]
+- Exemple : "Le secret professionnel est absolu. [Référence : Code de Déontologie 
+  Médicale, Décret 92-276, Article 36, Alinéa 1]"
+      </pre>
+    </div>
+  </div>
+  <button type="button" class="ai-button" data-prompt-key="dossier1-affaire1">
+    ✨ Interroger LegiMedTrav-AI
+  </button>
+</div>
+
+      <div id="d1-a2" class="sub-content-warroom">
+  <div class="card">
+    <h3>📢 Affaire n°2 : L'obligation de conseil oubliée</h3>
+    <blockquote>
+      Lors d’une visite, vous détectez un risque psychosocial majeur, mais le médecin référent ne signale rien à l’employeur. Vous vous interrogez sur votre responsabilité.
+    </blockquote>
+
+    <div class="question-detail" style="margin-top: 16px; padding-top: 12px; border-top: 1px solid #333;">
+      <h4>📋 Question à poser à LegiMedTrav :</h4>
+      <pre style="background: #0a0a10; padding: 12px; border-radius: 4px; overflow-x: auto; font-size: 0.9em; white-space: pre-wrap;">
+1. MISSION FONDAMENTALE DU MÉDECIN DU TRAVAIL :
+   a) Selon la Loi 88-07 relative à l'hygiène, la sécurité et la médecine 
+      du travail, quelle est la nature de la mission du médecin du travail ?
+   b) Citez PRÉCISÉMENT l'article de la Loi 88-07 définissant cette mission.
+   c) Reproduisez l'extrait pertinent du texte législatif.
+
+2. ÉTENDUE DE LA MISSION - INDIVIDU VS COLLECTIF :
+   a) Le rôle du médecin du travail se limite-t-il au suivi médical individuel 
+      des salariés ?
+   b) Quelle obligation a-t-il concernant l'action sur le milieu de travail ?
+   c) Citez l'article de la Loi 88-07 précisant cette obligation d'action 
+      sur l'environnement de travail.
+   d) Le médecin du travail a-t-il une contrainte temporelle réglementaire 
+      (proportion de temps minimum) pour son action sur le milieu ? 
+      Si oui, citez le texte. Si non, précisez que cette proportion n'existe 
+      pas dans la législation algérienne.
+
+3. OBLIGATION DE CONSEIL ENVERS L'EMPLOYEUR :
+   a) Le médecin du travail a-t-il une obligation de conseil actif envers 
+      l'employeur ?
+   b) Citez l'article du Décret exécutif n° 93-120 du 15 mai 1993 (relatif 
+      à l'organisation de la médecine du travail) définissant cette fonction 
+      de conseil.
+   c) Quels sont les outils réglementaires permettant au médecin de formaliser 
+      ses recommandations à l'employeur ? (précisez notamment le rôle du 
+      rapport annuel)
+
+4. CONSÉQUENCES JURIDIQUES D'UN DÉFAUT D'ACTION COLLECTIVE :
+   a) Un médecin qui se limite aux soins individuels sans agir sur les causes 
+      collectives identifiées engage-t-il sa responsabilité ?
+   b) Sur quelle base légale cette responsabilité peut-elle être invoquée ?
+
+FORMAT DE RÉPONSE EXIGÉ :
+- Chaque affirmation doit être suivie de : [Référence : Texte, Article, Alinéa]
+- Précisez si une information n'existe PAS dans la législation algérienne 
+  (exemple : "Il n'existe aucune proportion temporelle fixée par la loi 
+  algérienne pour l'action sur le milieu")
+      </pre>
+    </div>
+  </div>
+  <button type="button" class="ai-button" data-prompt-key="dossier1-affaire2">
+    ✨ Interroger LegiMedTrav-AI
+  </button>
+</div>
+
+      <div id="d1-a3" class="sub-content-warroom">
+  <div class="card">
+    <h3>⚠️ Affaire n°3 : Le silence face au danger</h3>
+    <blockquote>
+      Un travailleur vous confie un risque imminent ignoré par la hiérarchie. Vous hésitez : alerter = risquer votre crédibilité ; se taire = trahir votre serment.
+    </blockquote>
+
+    <div class="question-detail" style="margin-top: 16px; padding-top: 12px; border-top: 1px solid #333;">
+      <h4>📋 Question à poser à LegiMedTrav :</h4>
+      <pre style="background: #0a0a10; padding: 12px; border-radius: 4px; overflow-x: auto; font-size: 0.9em; white-space: pre-wrap;">
+1. OBLIGATION DE TRAÇABILITÉ DE L'ALERTE :
+   a) Une alerte orale du médecin du travail constitue-t-elle une preuve 
+      juridiquement valable ?
+   b) Quels sont les moyens réglementaires de traçabilité écrite obligatoire 
+      pour le médecin du travail ?
+   c) Citez les textes réglementaires (loi, décret, arrêté) précisant 
+      l'obligation de tenue du registre d'hygiène et de sécurité.
+   d) Quel est le statut juridique d'une alerte consignée dans ce registre ?
+
+2. ESCALADE INTERNE OBLIGATOIRE :
+   a) Quelles sont les instances internes que le médecin du travail doit 
+      informer officiellement face à un danger identifié ?
+   b) Précisez le rôle de la Commission d'Hygiène et de Sécurité (CHS) :
+      - Base légale de création (citez le décret et l'article)
+      - Mission de la CHS face à un danger
+      - Pouvoir de la CHS vis-à-vis de l'employeur
+   c) Citez le texte précisant l'obligation du médecin d'informer la CHS.
+
+3. RECOURS EXTERNE - DEVOIR D'ALERTE :
+   a) Dans quelles circonstances le médecin du travail a-t-il le DEVOIR 
+      (et non simplement la possibilité) d'alerter l'Inspection du Travail ?
+   b) Définissez la notion de "danger grave et imminent" selon la législation 
+      algérienne du travail. Citez la base légale.
+   c) Quelle est la procédure réglementaire de signalement à l'Inspection 
+      du Travail ?
+   d) Citez l'article de la Loi 90-11 (Code du travail) ou de la Loi 88-07 
+      précisant ce devoir d'alerte aux autorités compétentes.
+
+4. RESPONSABILITÉ JURIDIQUE DU MÉDECIN :
+   a) Un médecin qui se limite à une alerte orale sans suivi engage-t-il 
+      sa responsabilité en cas d'accident ultérieur ?
+   b) Sur quelle base légale cette responsabilité peut-elle être établie ?
+   c) Le silence ou l'absence de traçabilité peuvent-ils être qualifiés 
+      juridiquement de "caution implicite" du danger ?
+
+5. POUVOIR DE DÉCISION DU MÉDECIN :
+   a) Le médecin du travail a-t-il le pouvoir réglementaire d'arrêter 
+      une activité dangereuse ?
+   b) Si oui, citez la base légale. Si non, précisez les limites de son pouvoir 
+      et les recours dont il dispose.
+
+FORMAT DE RÉPONSE EXIGÉ :
+- Chaque affirmation doit être suivie de : [Référence : Texte, Article, Alinéa]
+- Si un pouvoir ou une procédure n'existe PAS dans la législation algérienne, 
+  le préciser explicitement
+- Distinguer clairement : obligations / recommandations / interdictions
+      </pre>
+    </div>
+  </div>
+  <button type="button" class="ai-button" data-prompt-key="dossier1-affaire3">
+    ✨ Interroger LegiMedTrav-AI
+  </button>
+</div>
     </section>
 
-    <!-- DOSSIER 2 : PLAN DE SURVEILLANCE MÉDICALE -->
+    <!-- DOSSIER 2 : Surveillance -->
     <section id="dossier2" class="tab-content">
-      <h2>Dossier 2 : Plan de Surveillance Médicale</h2>
-      <div class="card">
-        <p><strong>Le Défi :</strong> L'entreprise emploie des soudeurs, des magasiniers caristes et des administratifs. Comment organiser leur suivi médical de manière pertinente et légale ?</p>
+      <h2>📁 Dossier 2 : Surveillance médicale adaptée</h2>
+
+      <div class="sub-tabs-warroom">
+        <button type="button" class="sub-tab-warroom active" data-subtab="d2-p1">Phase 1</button>
+        <button type="button" class="sub-tab-warroom" data-subtab="d2-p2">Phase 2</button>
+        <button type="button" class="sub-tab-warroom" data-subtab="d2-p3">Phase 3</button>
       </div>
-      <button type="button" class="ai-button" onclick="askAI('LegiMedTrav-AI, générez un tableau de surveillance médicale pour ces trois catégories, en précisant la nature du suivi, sa périodicité et les références légales.')">
-        ✨ Interroger LegiMedTrav-AI
-      </button>
+
+      <div id="d2-p1" class="sub-content-warroom active">
+        <div class="card">
+          <h3>👔 Phase 1 : Surveillance des administratifs</h3>
+          <blockquote>
+            Quelles sont les obligations minimales de suivi pour un personnel de bureau exposé principalement à des risques psychosociaux et ergonomiques ?
+          </blockquote>
+        </div>
+        <button type="button" class="ai-button" data-prompt-key="dossier2-phase1">
+          ✨ Interroger LegiMedTrav-AI
+        </button>
+      </div>
+
+      <div id="d2-p2" class="sub-content-warroom">
+        <div class="card">
+          <h3>🛡️ Phase 2 : Travailleurs à risques renforcés</h3>
+          <blockquote>
+            Des soudeurs exposés aux fumées métalliques et UV : fréquence des visites, examens complémentaires, rôle du médecin dans l’adaptation du poste.
+          </blockquote>
+        </div>
+        <button type="button" class="ai-button" data-prompt-key="dossier2-phase2">
+          ✨ Interroger LegiMedTrav-AI
+        </button>
+      </div>
+
+      <div id="d2-p3" class="sub-content-warroom">
+        <div class="card">
+          <h3>📉 Phase 3 : Suivi Post-Professionnel (SPP) en Algérie</h3>
+          <blockquote>
+            Un ancien ouvrier amiante licencié il y a 3 ans revient pour un suivi. Quel est le cadre légal du SPP ? Qui finance ? Quels délais ?
+          </blockquote>
+        </div>
+        <button type="button" class="ai-button" data-prompt-key="dossier2-phase3">
+          ✨ Interroger LegiMedTrav-AI
+        </button>
+      </div>
     </section>
 
-    <!-- DOSSIER 3 : LES OUTILS DU MÉDECIN -->
+    <!-- DOSSIER 3 : Audit -->
     <section id="dossier3" class="tab-content">
-      <h2>Dossier 3 : Les Outils du Médecin</h2>
-      <div class="card">
-        <p><strong>Le Défi :</strong> Un inspecteur du travail arrive pour un contrôle inopiné. Il vous demande la preuve de votre activité. Quels sont les 3 documents CLÉS que vous devez lui présenter pour démontrer la conformité et le sérieux de votre service ?</p>
+      <h2>📁 Dossier 3 : Audit & outils réglementaires</h2>
+
+      <div class="sub-tabs-warroom">
+        <button type="button" class="sub-tab-warroom active" data-subtab="d3-pc1">Pièce 1</button>
+        <button type="button" class="sub-tab-warroom" data-subtab="d3-pc2">Pièce 2</button>
+        <button type="button" class="sub-tab-warroom" data-subtab="d3-pc3">Pièce 3</button>
+        <button type="button" class="sub-tab-warroom" data-subtab="d3-pc4">Synthèse</button>
       </div>
-      <button type="button" class="ai-button" onclick="askAI('LegiMedTrav-AI, listez les 3 documents fondamentaux du médecin du travail et leur objectif principal.')">
-        ✨ Interroger LegiMedTrav-AI
-      </button>
+
+      <div id="d3-pc1" class="sub-content-warroom active">
+        <div class="card">
+          <h3>📄 Pièce à conviction n°1 : Fiche de visite médicale</h3>
+          <blockquote>
+            Une fiche incomplète, sans mention d’aptitude spécifique. Est-elle valable ? Quelles sanctions en cas de contrôle ?
+          </blockquote>
+        </div>
+        <button type="button" class="ai-button" data-prompt-key="dossier3-piece1">
+          ✨ Interroger LegiMedTrav-AI
+        </button>
+      </div>
+
+      <div id="d3-pc2" class="sub-content-warroom">
+        <div class="card">
+          <h3>💉 Pièce à conviction n°2 : Registre de vaccination</h3>
+          <blockquote>
+            Des vaccinations obligatoires non enregistrées (ex: tétanos). Responsabilité du médecin ? De l’employeur ?
+          </blockquote>
+        </div>
+        <button type="button" class="ai-button" data-prompt-key="dossier3-piece2">
+          ✨ Interroger LegiMedTrav-AI
+        </button>
+      </div>
+
+      <div id="d3-pc3" class="sub-content-warroom">
+        <div class="card">
+          <h3>🧱 Pièce à conviction n°3 : Traçabilité amiante</h3>
+          <blockquote>
+            Absence de registre d’exposition à l’amiante sur 10 ans. Conséquences pour le SPP et la reconnaissance de maladie professionnelle.
+          </blockquote>
+        </div>
+        <button type="button" class="ai-button" data-prompt-key="dossier3-piece3">
+          ✨ Interroger LegiMedTrav-AI
+        </button>
+      </div>
+
+      <div id="d3-pc4" class="sub-content-warroom">
+        <div class="card">
+          <h3>✅ Synthèse et plan d'actions correctives</h3>
+          <blockquote>
+            Proposez un plan type de remédiation en 4 points après un audit défaillant.
+          </blockquote>
+        </div>
+        <button type="button" class="ai-button" data-prompt-key="dossier3-synthese">
+          ✨ Interroger LegiMedTrav-AI
+        </button>
+      </div>
     </section>
 
-    <!-- DOSSIER 4 : L’ÉCOSYSTÈME DE LA PRÉVENTION -->
+    <!-- DOSSIER 4 : Crise -->
     <section id="dossier4" class="tab-content">
-      <h2>Dossier 4 : L’Écosystème de la Prévention</h2>
-      <div class="card">
-        <p><strong>Le Défi :</strong> Vous avez identifié un risque d'intoxication alimentaire à la cantine. Simultanément, la CNAS vous contacte pour une enquête sur une maladie professionnelle déclarée par un soudeur. Comment gérez-vous ces deux fronts sans vous disperser ?</p>
+      <h2>📁 Dossier 4 : Écosystème en temps de crise</h2>
+
+      <div class="sub-tabs-warroom">
+        <button type="button" class="sub-tab-warroom active" data-subtab="d4-i1">Incident 1</button>
+        <button type="button" class="sub-tab-warroom" data-subtab="d4-i2">Incident 2</button>
+        <button type="button" class="sub-tab-warroom" data-subtab="d4-i3">Incident 3</button>
       </div>
-      <button type="button" class="ai-button" onclick="askAI('LegiMedTrav-AI, pour ces deux cas, décrivez la collaboration à établir avec la CHS, l\'Inspection du Travail, la CNAS et le service d\'hygiène.')">
-        ✨ Interroger LegiMedTrav-AI
-      </button>
+
+      <div id="d4-i1" class="sub-content-warroom active">
+        <div class="card">
+          <h3>🚨 Incident 1 : Alerte interne</h3>
+          <blockquote>
+            Un accident collectif (3 intoxications) est découvert. Procédure d’alerte immédiate : qui prévenir ? Dans quel délai ?
+          </blockquote>
+        </div>
+        <button type="button" class="ai-button" data-prompt-key="dossier4-incident1">
+          ✨ Interroger LegiMedTrav-AI
+        </button>
+      </div>
+
+      <div id="d4-i2" class="sub-content-warroom">
+        <div class="card">
+          <h3>📡 Incident 2 : Escalade externe</h3>
+          <blockquote>
+            La presse locale apprend l’incident. Comment gérer la communication SST sans nuire à la confidentialité médicale ?
+          </blockquote>
+        </div>
+        <button type="button" class="ai-button" data-prompt-key="dossier4-incident2">
+          ✨ Interroger LegiMedTrav-AI
+        </button>
+      </div>
+
+      <div id="d4-i3" class="sub-content-warroom">
+        <div class="card">
+          <h3>🔄 Incident 3 : Gestion après crise</h3>
+          <blockquote>
+            Quel suivi psychologique et médical proposer aux victimes ? Quel retour d’expérience réglementaire (REX) est exigé ?
+          </blockquote>
+        </div>
+        <button type="button" class="ai-button" data-prompt-key="dossier4-incident3">
+          ✨ Interroger LegiMedTrav-AI
+        </button>
+      </div>
     </section>
 
-    <!-- PHASE 6 : DÉBRIEFING -->
+    <!-- DÉBRIEFING -->
     <section id="debriefing" class="tab-content">
-      <h2>Phase 6 : Débriefing</h2>
+      <h2>📝 Débriefing & partage</h2>
       <div class="card">
         <blockquote>
-          "Mission accomplie. En moins d'une heure, nous avons bâti une stratégie de prévention solide et conforme. La réglementation n'est pas une contrainte, mais une feuille de route. Mais la vraie mission commence demain. Pour cela, LegiMedTrav-AI est transféré sur vos terminaux."
+          Scannez ce QR code pour accéder à nouveau aux réponses LegiMedTrav, ou partagez-le avec vos collègues.
         </blockquote>
       </div>
       <div class="card qr-section">
-        <h3>Scannez pour vous inscrire et demander l'accés à l'outil :</h3>
+        <h3>Code QR d'accès à LegiMedTrav</h3>
         <div id="qrcode"></div>
         <p style="font-size: 0.85em; color: #aaa; margin-top: 10px;">
-          💡 Un compte Google gratuit est requis pour utiliser LegiMedTrav-AI.
+          💡 Un compte Google gratuit est requis.
         </p>
       </div>
     </section>
 
   </main>
 
-  <!-- Scripts -->
+  <!-- Scripts (inchangés) -->
   <script src="libs/qrcode.min.js"></script>
   <script src="script.js"></script>
 </body>

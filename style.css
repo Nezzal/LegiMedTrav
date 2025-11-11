@@ -185,3 +185,43 @@ blockquote {
     font-size: 1rem;
   }
 }
+
+/* === SOUS-ONGLETS (Affaires, Phases, Pièces) === */
+.sub-tabs-warroom {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 16px 0 20px;
+}
+
+.sub-tab-warroom {
+  padding: 6px 12px;
+  background: #252535;
+  color: #bbb;
+  border: 1px solid #555;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.2s;
+}
+
+.sub-tab-warroom:hover {
+  background: #333;
+  color: white;
+}
+
+.sub-tab-warroom.active {
+  background: #4a90e2;
+  color: white;
+  border-color: #66a0f0;
+  box-shadow: 0 0 4px rgba(74, 144, 226, 0.5);
+}
+
+/* === Contenu des sous-onglets === */
+.sub-content-warroom {
+  display: none;
+}
+
+.sub-content-warroom.active {
+  display: block;
+}
