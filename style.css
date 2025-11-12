@@ -165,27 +165,6 @@ blockquote {
   padding: 10px;
 }
 
-/* === Responsive === */
-@media (max-width: 768px) {
-  body {
-    padding: 12px;
-  }
-
-  .app-header h1 {
-    font-size: 1.8rem;
-  }
-
-  .tab-warroom {
-    padding: 6px 12px;
-    font-size: 0.85rem;
-  }
-
-  .ai-button {
-    padding: 12px;
-    font-size: 1rem;
-  }
-}
-
 /* === SOUS-ONGLETS (Affaires, Phases, Pièces) === */
 .sub-tabs-warroom {
   display: flex;
@@ -224,4 +203,25 @@ blockquote {
 
 .sub-content-warroom.active {
   display: block;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  body {
+    padding: 12px;
+  }
+
+  .app-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .tab-warroom {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+
+  .ai-button {
+    padding: 12px;
+    font-size: 1rem;
+  }
 }
